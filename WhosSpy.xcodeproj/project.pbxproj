@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F56E611208725DD00B91FE4 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56E610208725DD00B91FE4 /* VoteViewController.swift */; };
+		0F56E613208744A300B91FE4 /* CloseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56E612208744A300B91FE4 /* CloseCollectionViewCell.swift */; };
+		0F56E615208744AF00B91FE4 /* OpenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56E614208744AF00B91FE4 /* OpenCollectionViewCell.swift */; };
+		0F5986152085E0E0004AA79B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5986142085E0E0004AA79B /* Constant.swift */; };
 		0F5E76462084849D0049FE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E76452084849D0049FE20 /* AppDelegate.swift */; };
-		0F5E76482084849D0049FE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E76472084849D0049FE20 /* ViewController.swift */; };
 		0F5E764B2084849D0049FE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5E76492084849D0049FE20 /* Main.storyboard */; };
 		0F5E764D2084849D0049FE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5E764C2084849D0049FE20 /* Assets.xcassets */; };
-		0F5E76502084849D0049FE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5E764E2084849D0049FE20 /* LaunchScreen.storyboard */; };
 		0F5E765B2084849D0049FE20 /* WhosSpyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E765A2084849D0049FE20 /* WhosSpyTests.swift */; };
 		0F5E76662084849D0049FE20 /* WhosSpyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E76652084849D0049FE20 /* WhosSpyUITests.swift */; };
+		0F5E7674208488C40049FE20 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7673208488C40049FE20 /* MainViewController.swift */; };
+		0F5E7676208488D60049FE20 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7675208488D60049FE20 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F56E610208725DD00B91FE4 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		0F56E612208744A300B91FE4 /* CloseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F56E614208744AF00B91FE4 /* OpenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F5986142085E0E0004AA79B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0F5E76422084849D0049FE20 /* WhosSpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhosSpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5E76452084849D0049FE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F5E76472084849D0049FE20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F5E764A2084849D0049FE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F5E764C2084849D0049FE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0F5E764F2084849D0049FE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F5E76512084849D0049FE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F5E76562084849D0049FE20 /* WhosSpyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhosSpyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5E765A2084849D0049FE20 /* WhosSpyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosSpyTests.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		0F5E76612084849D0049FE20 /* WhosSpyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhosSpyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5E76652084849D0049FE20 /* WhosSpyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhosSpyUITests.swift; sourceTree = "<group>"; };
 		0F5E76672084849D0049FE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F5E7673208488C40049FE20 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F5E7675208488D60049FE20 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				0F5E76452084849D0049FE20 /* AppDelegate.swift */,
-				0F5E76472084849D0049FE20 /* ViewController.swift */,
 				0F5E76492084849D0049FE20 /* Main.storyboard */,
 				0F5E764C2084849D0049FE20 /* Assets.xcassets */,
-				0F5E764E2084849D0049FE20 /* LaunchScreen.storyboard */,
 				0F5E76512084849D0049FE20 /* Info.plist */,
+				0F5E7673208488C40049FE20 /* MainViewController.swift */,
+				0F5E7675208488D60049FE20 /* SettingViewController.swift */,
+				0F5986142085E0E0004AA79B /* Constant.swift */,
+				0F56E610208725DD00B91FE4 /* VoteViewController.swift */,
+				0F56E612208744A300B91FE4 /* CloseCollectionViewCell.swift */,
+				0F56E614208744AF00B91FE4 /* OpenCollectionViewCell.swift */,
 			);
 			path = WhosSpy;
 			sourceTree = "<group>";
@@ -232,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F5E76502084849D0049FE20 /* LaunchScreen.storyboard in Resources */,
 				0F5E764D2084849D0049FE20 /* Assets.xcassets in Resources */,
 				0F5E764B2084849D0049FE20 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F5E76482084849D0049FE20 /* ViewController.swift in Sources */,
+				0F5E7674208488C40049FE20 /* MainViewController.swift in Sources */,
+				0F56E615208744AF00B91FE4 /* OpenCollectionViewCell.swift in Sources */,
+				0F56E613208744A300B91FE4 /* CloseCollectionViewCell.swift in Sources */,
 				0F5E76462084849D0049FE20 /* AppDelegate.swift in Sources */,
+				0F56E611208725DD00B91FE4 /* VoteViewController.swift in Sources */,
+				0F5E7676208488D60049FE20 /* SettingViewController.swift in Sources */,
+				0F5986152085E0E0004AA79B /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +318,6 @@
 				0F5E764A2084849D0049FE20 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0F5E764E2084849D0049FE20 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F5E764F2084849D0049FE20 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -428,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhosSpy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jj.WhosSpy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhosSpy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jj.WhosSpy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
