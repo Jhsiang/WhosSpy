@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
             sender.setTitle("Enter", for: .normal)
             userIndex += 1
             return
-        }else if userIndex > villNumber || true{
+        }else if userIndex > villNumber {
             self.performSegue(withIdentifier: "seque_main_to_vote", sender: nil)
             return
         }

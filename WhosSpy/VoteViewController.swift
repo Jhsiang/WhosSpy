@@ -30,12 +30,12 @@ class VoteViewController: UIViewController,UICollectionViewDelegate,UICollection
 
 //MARK: - Button Click
     @IBAction func resetClick(_ sender: UIButton) {
-        let alertVC = UIAlertController(title: "Reset", message: "", preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (UIAlertAction) in
+        let alertVC = UIAlertController(title: "重新開始", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "確認", style: UIAlertActionStyle.default) { (UIAlertAction) in
             self.performSegue(withIdentifier: "seque_vote_to_setting", sender: nil)
             return
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         alertVC.addAction(okAction)
         alertVC.addAction(cancelAction)
         self.present(alertVC, animated: true, completion: nil)
@@ -44,19 +44,33 @@ class VoteViewController: UIViewController,UICollectionViewDelegate,UICollection
 //MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        if (indexPath.item + 1) == spyIndex{
-            let alertVC = UIAlertController(title: "Bingo", message: "", preferredStyle: UIAlertControllerStyle.alert)
-            let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
-            alertVC.addAction(alertAction)
-            self.present(alertVC, animated: true, completion: nil)
-        }else{
-            let alertVC = UIAlertController(title: "Fail", message: "", preferredStyle: UIAlertControllerStyle.alert)
-            let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
-            alertVC.addAction(alertAction)
-            self.present(alertVC, animated: true, completion: nil)
-            collectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor.black
-        }
+        let alertVC = UIAlertController(title: "確定選擇\(indexPath.item + 1)號玩家嗎？", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(
+            title: "確認",
+            style: .default,
+            handler:{
+                (action: UIAlertAction!) -> Void in
+                if (indexPath.item + 1) == self.spyIndex{
+                    let resultAlertVC = UIAlertController(title: "答對了!!", message: "", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction(title: "確認", style: UIAlertActionStyle.cancel, handler: nil)
+                    resultAlertVC.addAction(alertAction)
+                    self.present(resultAlertVC, animated: true, completion: nil)
+                }else{
+                    let resultAlertVC = UIAlertController(title: "答錯了!!", message: "", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction(title: "確認", style: UIAlertActionStyle.cancel, handler: nil)
+                    resultAlertVC.addAction(alertAction)
+                    self.present(resultAlertVC, animated: true, completion: nil)
+                    collectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor.black
+                }
+        })
 
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (UIAlertAction) in
+            return
+        }
+        
+        alertVC.addAction(okAction)
+        alertVC.addAction(cancelAction)
+        self.present(alertVC, animated: true, completion: nil)
     }
 
 //MARK: - UICollectionViewDataSource

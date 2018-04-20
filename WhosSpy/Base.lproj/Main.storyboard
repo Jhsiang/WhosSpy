@@ -150,8 +150,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-qA-4fW">
                                 <rect key="frame" x="26" y="70" width="323" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-uO-UxX">
-                                        <rect key="frame" x="0.0" y="63.5" width="323" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-uO-UxX">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="150"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -159,11 +159,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="yUd-uO-UxX" firstAttribute="width" secondItem="YWR-qA-4fW" secondAttribute="width" id="0KF-cD-gZ8"/>
-                                    <constraint firstItem="yUd-uO-UxX" firstAttribute="centerY" secondItem="YWR-qA-4fW" secondAttribute="centerY" id="5C4-zy-Fzb"/>
+                                    <constraint firstAttribute="bottom" secondItem="yUd-uO-UxX" secondAttribute="bottom" id="31v-5Q-zKw"/>
                                     <constraint firstAttribute="height" constant="150" id="ApQ-sH-8gK"/>
-                                    <constraint firstItem="yUd-uO-UxX" firstAttribute="centerX" secondItem="YWR-qA-4fW" secondAttribute="centerX" id="bT4-zZ-Jve"/>
-                                    <constraint firstItem="yUd-uO-UxX" firstAttribute="width" secondItem="YWR-qA-4fW" secondAttribute="width" id="p5v-ma-NFU"/>
+                                    <constraint firstItem="yUd-uO-UxX" firstAttribute="top" secondItem="YWR-qA-4fW" secondAttribute="top" id="HqW-iw-v0O"/>
+                                    <constraint firstAttribute="trailing" secondItem="yUd-uO-UxX" secondAttribute="trailing" id="d2R-Su-BYe"/>
+                                    <constraint firstItem="yUd-uO-UxX" firstAttribute="leading" secondItem="YWR-qA-4fW" secondAttribute="leading" id="sNR-4e-FbM"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zv-bd-Cc8">
