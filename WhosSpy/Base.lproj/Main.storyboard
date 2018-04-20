@@ -24,7 +24,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-Co-rWH">
                                 <rect key="frame" x="10" y="587" width="355" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="開始"/>
                                 <connections>
                                     <action selector="startClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QzJ-3v-iGy"/>
                                 </connections>
@@ -32,7 +32,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzJ-gg-VF9">
                                 <rect key="frame" x="10" y="50" width="355" height="250"/>
                                 <subviews>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="3" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ed2-N6-dDP">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="2" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ed2-N6-dDP">
                                         <rect key="frame" x="178" y="50" width="94" height="29"/>
                                     </stepper>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UrX-kp-Vcp">
@@ -168,7 +168,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zv-bd-Cc8">
                                 <rect key="frame" x="10" y="587" width="355" height="30"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="下一步"/>
                                 <connections>
                                     <action selector="nextClick:" destination="j8a-tI-yFP" eventType="touchUpInside" id="bHn-Jy-lQf"/>
                                 </connections>
@@ -208,7 +208,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JB-xp-cfm">
                                 <rect key="frame" x="10" y="587" width="355" height="30"/>
-                                <state key="normal" title="Enter"/>
+                                <state key="normal" title="重新開始"/>
                                 <connections>
                                     <action selector="resetClick:" destination="fyG-ct-5Zu" eventType="touchUpInside" id="7yS-We-peH"/>
                                 </connections>
@@ -217,29 +217,37 @@
                                 <rect key="frame" x="26" y="30" width="323" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dr6-oV-gYH">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="99" height="98"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CloseCell" id="F0i-1B-V9e" customClass="CloseCollectionViewCell" customModule="WhosSpy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suh-qX-TEr">
+                                                    <rect key="frame" x="8" y="8" width="83" height="82"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OpenCell" id="4d9-99-U4f" customClass="OpenCollectionViewCell" customModule="WhosSpy" customModuleProvider="target">
-                                        <rect key="frame" x="68.5" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Suh-qX-TEr" firstAttribute="leading" secondItem="F0i-1B-V9e" secondAttribute="leadingMargin" id="HUP-QU-RQa"/>
+                                            <constraint firstItem="Suh-qX-TEr" firstAttribute="top" secondItem="F0i-1B-V9e" secondAttribute="topMargin" id="Qjj-nz-esR"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Suh-qX-TEr" secondAttribute="bottom" id="nCc-ur-P7K"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Suh-qX-TEr" secondAttribute="trailing" id="nId-5v-Afb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="Suh-qX-TEr" id="ENM-0O-aGA"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -265,10 +273,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUE-Xw-941" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="81"/>
+            <point key="canvasLocation" x="1952.8" y="80.50974512743629"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AaO-Ap-dVS"/>
+        <segue reference="zCJ-eg-Co2"/>
     </inferredMetricsTieBreakers>
 </document>

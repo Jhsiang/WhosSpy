@@ -9,5 +9,6 @@
 import UIKit
 
 class CloseCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var cellLabel: UILabel!
     
 }

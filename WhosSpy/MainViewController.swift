@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet var ansLabel: UILabel!
 
     var villNumber = 0
+    var userIndex = 0
     var spyIndex = 0
     var anA = Array<String>()
 
@@ -28,7 +29,9 @@ class MainViewController: UIViewController {
         let saveInt = UserDefaults.standard.integer(forKey: PREF_VILL_NUMBERS)
         villNumber = saveInt * 2
         spyIndex = Int(arc4random_uniform(UInt32(saveInt)) + 1)
+        UserDefaults.standard.set(spyIndex, forKey: PREF_SPY_INDEX)
         print("total = \(totalA.count)")
+        print("sIndex = \(spyIndex)")
         anA = totalA[Int(arc4random_uniform(UInt32(totalA.count)))]
         ansLabel.text = "Next"
     }
@@ -39,24 +42,28 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func nextClick(_ sender: UIButton) {
-        if villNumber == 0 {
+
+        let userRealIndex = userIndex/2 + 1
+
+        if userIndex == villNumber{
             ansLabel.text = "Vote"
             sender.setTitle("Enter", for: .normal)
-            villNumber -= 1
+            userIndex += 1
             return
-        }
-        if villNumber < 0  || true{
+        }else if userIndex > villNumber || true{
             self.performSegue(withIdentifier: "seque_main_to_vote", sender: nil)
             return
         }
-        if villNumber % 2 == 0{
-            ansLabel.text = desceiption(index: villNumber/2)
+
+        if userIndex % 2 == 0{
+            ansLabel.text = desc(index: userRealIndex)
         }else{
             let str1 = anA[0]
             let str2 = anA[1]
-            ansLabel.text = (villNumber/2 + 1) == spyIndex ? showA(index: villNumber/2 + 1, ans: str2) : showA(index: villNumber/2 + 1, ans: str1)
+            ansLabel.text = userRealIndex == spyIndex ? showA(index: userRealIndex, ans: str2) : showA(index: userRealIndex, ans: str1)
         }
-        villNumber -= 1
+
+        userIndex += 1
     }
 }
 

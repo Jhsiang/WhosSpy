@@ -9,15 +9,40 @@
 import Foundation
 
 let PREF_VILL_NUMBERS = "pref_vill_numbers"
+let PREF_SPY_INDEX = "pref_spy_index"
 
 
-func desceiption(index:Int) -> String{
+func desc(index:Int) -> String{
     return "請給第 \(index) 個人觀看"
 }
 
 func showA(index:Int,ans:String) -> String{
     return "第 \(index) 個人的答案是[\(ans)]"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let totalA:[Array<String>] = [
